@@ -1,0 +1,5 @@
+.btn.icon.noaccess:before {
+	background-image:url('chrome-extension://__MSG_@@extension_id__/images/iframe_sprite.png');
+	background-size: 400px 60px;
+
+}
