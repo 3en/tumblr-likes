@@ -1,10 +1,10 @@
 {
   "manifest_version": 2,
   "name": "Tumblr Likes - Missing Button",
-  "version": "2.1.2",
+  "version": "2.2",
   "description": "A simple extension that adds a Tumblr Likes button that goes to a user's 'Liked By' page.",
   "permissions": [
-    "http://*.tumblr.com/", "http://*.tumblr.com/*"
+    "http://*.tumblr.com/", "http://*.tumblr.com/*", "https://*.tumblr.com/", "https://*.tumblr.com/*"
   ],
   "icons": {
                   "16": "icon16.png",
@@ -13,15 +13,15 @@
            },
   "content_scripts": [
     {
-      "matches": ["http://*.tumblr.com/*"],
+      "matches": ["*://*.tumblr.com/*"],
       "js": ["jquery.min.js", "background.js"],
       "css": ["css.css"],
       "run_at": "document_end",
-      "all_frames": true
+      "all_frames": false
     },
     {
-      "matches": ["http://assets.tumblr.com/assets/html/iframe/o.html*", "http://www.tumblr.com/dashboard/iframe*"],
-      "js": ["jquery.min.js", "test.js"],
+      "matches": ["*://assets.tumblr.com/assets/html/iframe/o.html*", "*://www.tumblr.com/dashboard/iframe*"],
+      "js": ["jquery.min.js", "background-iframe.js"],
       "css": ["css.css"],
       "run_at": "document_end",
       "all_frames": true
@@ -31,5 +31,3 @@
     "images/*"
   ]
 }
-
-//http://assets.tumblr.com/assets/html/iframe/o.html

@@ -1,5 +1,18 @@
-.btn.icon.noaccess:before {
-	background-image:url('chrome-extension://__MSG_@@extension_id__/images/iframe_sprite.png');
-	background-size: 400px 60px;
 
+.likes-button:before {
+    width: 20px;
+    height: 18px;
+}
+
+
+.likes-button:before {
+    background-image:url('chrome-extension://__MSG_@@extension_id__/images/iframe_sprite.png');
+    content: '';
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.likes-button a {
+	color: #FFFFFF;
+	padding-left: 2px;
 }
